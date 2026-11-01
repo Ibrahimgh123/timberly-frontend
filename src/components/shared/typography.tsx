@@ -56,3 +56,21 @@ export function Font13GrayRegular({
     </span>
   );
 }
+
+export function Font14ForestMedium({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-sans text-[14px] font-medium leading-[20px] tracking-[0.35px] text-brand-forest",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}

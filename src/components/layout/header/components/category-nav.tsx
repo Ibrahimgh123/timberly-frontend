@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Font14ForestMedium } from "@/components/shared/typography";
 
 type CategoryNavProps = {
   locale?: "en" | "ar";
@@ -39,13 +40,15 @@ export function CategoryNav({
                 <Link
                   href={href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`group relative block whitespace-nowrap py-3 text-xs transition-colors hover:text-brand-walnut ${
-                    isActive
-                      ? "text-brand-walnut"
-                      : "text-ink-deep-ink"
-                  }`}
+                  className="group relative block whitespace-nowrap py-3"
                 >
-                  {label}
+                  <Font14ForestMedium
+                    className={`transition-colors group-hover:text-brand-walnut ${
+                      isActive ? "text-brand-walnut" : "text-ink-deep-ink"
+                    }`}
+                  >
+                    {label}
+                  </Font14ForestMedium>
 
                   <span
                     aria-hidden="true"

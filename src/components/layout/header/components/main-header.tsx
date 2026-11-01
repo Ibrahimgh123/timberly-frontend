@@ -17,7 +17,7 @@ export function MainHeader({
   wishlistCount = 0,
 }: MainHeaderProps) {
   return (
-    <div className="border-b border-outline-warm/60 bg-surface-white">
+    <div className="border-b border-outline-warm bg-surface-white">
       <div className="flex h-18 flex-wrap items-center justify-between gap-x-5 gap-y-3 px-4 py-3 lg:flex-nowrap lg:px-8">
         <Link
           href={`/${locale}`}
