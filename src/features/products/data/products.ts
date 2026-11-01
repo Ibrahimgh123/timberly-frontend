@@ -7,7 +7,7 @@ export const products: Product[] = [
     name: "Sora Bouclé Armchair",
     image: "/images/products/sora-armchair.jpg",
     description: "Lounge seating • French bouclé",
-    price: 3200,
+    price: 3900,
     currency: "USD",
     category: "living-room",
     badge: "bestseller",

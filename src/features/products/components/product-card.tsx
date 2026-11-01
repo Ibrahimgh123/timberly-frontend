@@ -5,7 +5,12 @@ import Link from "next/link";
 import { Heart, ShoppingBag } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Font11GrayMedium } from "@/components/shared/typography";
+import {
+  Font11GrayMedium,
+  Font16ForestSemibold,
+  Font18PlayfairForestRegular,
+} from "@/components/shared/typography";
+import { StoreBadge } from "@/components/shared/store-badge";
 import type { Product } from "../types/product";
 
 type ProductCardProps = {
@@ -19,15 +24,18 @@ type ProductCardProps = {
 const badges = {
   bestseller: {
     label: "Bestseller",
-    className: "bg-brand-sand text-brand-forest",
+    backgroundClassName: "bg-brand-sand",
+    textClassName: "text-brand-forest",
   },
   custom: {
     label: "Custom sizing available",
-    className: "bg-surface-stone text-brand-forest",
+    backgroundClassName: "bg-surface-stone",
+    textClassName: "text-brand-forest",
   },
   new: {
     label: "New",
-    className: "bg-brand-forest text-surface-white",
+    backgroundClassName: "bg-brand-forest",
+    textClassName: "text-surface-white",
   },
 } as const;
 
@@ -68,14 +76,13 @@ export function ProductCard({
         </Link>
 
         {badge && (
-          <span
-            className={cn(
-              "pointer-events-none absolute start-3 top-3 max-w-[calc(100%-64px)] rounded-sm px-2 py-1 text-[10px] font-semibold uppercase leading-tight tracking-wide",
-              badge.className,
-            )}
+          <StoreBadge
+            backgroundClassName={badge.backgroundClassName}
+            textClassName={badge.textClassName}
+            className="pointer-events-none absolute start-3 top-3 max-w-[calc(100%-64px)] rounded-sm px-2 py-1 text-[10px] font-semibold leading-tight tracking-wide"
           >
             {badge.label}
-          </span>
+          </StoreBadge>
         )}
 
         <button
@@ -101,23 +108,25 @@ export function ProductCard({
       </div>
 
       <div className="p-4">
-        <Font11GrayMedium className="mb-2 block truncate uppercase tracking-normal">
+        <Font11GrayMedium className="mb-2 block truncate uppercase tracking-wider">
           {product.description}
         </Font11GrayMedium>
 
-        <h3 className="font-serif text-lg leading-6 text-brand-forest">
+        <h3>
           <Link
             href={`/${locale}/products/${product.slug}`}
-            className="line-clamp-2 transition-colors hover:text-brand-walnut"
+            className="group"
           >
-            {product.name}
+            <Font18PlayfairForestRegular className="line-clamp-2 transition-colors group-hover:text-brand-walnut">
+              {product.name}
+            </Font18PlayfairForestRegular>
           </Link>
         </h3>
 
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-outline-warm pt-3">
-          <span className="text-base font-semibold tabular-nums text-brand-forest">
+          <Font16ForestSemibold>
             {price}
-          </span>
+          </Font16ForestSemibold>
 
           <button
             type="button"

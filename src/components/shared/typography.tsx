@@ -200,3 +200,39 @@ export function Font16JakartaLight({
     </span>
   );
 }
+
+export function Font18PlayfairForestRegular({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-heading text-lg leading-7 font-normal text-brand-forest",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
+export function Font16ForestSemibold({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-sans text-sm leading-5 font-semibold tabular-nums text-brand-forest sm:text-base sm:leading-6",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
