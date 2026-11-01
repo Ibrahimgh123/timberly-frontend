@@ -21,7 +21,7 @@ export function ShopByCategory({
       aria-labelledby="shop-by-category-title"
       className="bg-surface-warm-white px-4 py-8 lg:px-8 lg:py-10"
     >
-      <div className="">
+      <div>
         <div className="mb-5 flex items-center justify-between gap-4">
           <h2 id="shop-by-category-title" className="uppercase">
             <Font12SecondarySemibold>Shop by category</Font12SecondarySemibold>
