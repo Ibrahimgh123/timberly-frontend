@@ -4,7 +4,7 @@ import type { HeroSlideData } from "@/features/home/components/hero-slide";
 const slides: HeroSlideData[] = [
   {
     id: "autumn",
-    image: "/images/hero/autumn-living.jpg",
+    image: "/images/hero/hero1.png",
     imageAlt: "Armchair in a warm contemporary living room",
     badge: "Limited seasonal promotion",
     title: "Autumn Living Collection — Up to 25% Off Crafted Staples",
@@ -16,7 +16,7 @@ const slides: HeroSlideData[] = [
   },
   {
     id: "craftsmanship",
-    image: "/images/hero/autumn-living.jpg",
+    image: "/images/hero/hero2.png",
     imageAlt: "Handcrafted wooden furniture",
     badge: "Ghourani craftsmanship",
     title: "Crafted for Your Home. Built to Last.",

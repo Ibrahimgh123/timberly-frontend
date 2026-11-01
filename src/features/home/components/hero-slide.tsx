@@ -25,7 +25,7 @@ export function HeroSlide({ slide, priority = false }: HeroSlideProps) {
   const reducedMotion = useReducedMotion();
 
   return (
-    <div className="relative h-[480px] w-full">
+    <div className="relative h-full w-full">
       <motion.div
         className="absolute inset-0"
         initial={{ scale: reducedMotion ? 1 : 1.06 }}
