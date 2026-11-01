@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { StoreBadge } from "@/components/shared/store-badge";
+import { StoreButton } from "@/components/shared/store-button";
 import {
   Font16JakartaLight,
   Font48PlayfairRegular,
@@ -83,18 +83,14 @@ export function HeroSlide({ slide, priority = false }: HeroSlideProps) {
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
-          <Link
+          <StoreButton
             href={slide.href}
-            className="inline-flex min-h-11 items-center justify-center rounded-sm bg-surface-white px-7 text-xs font-semibold uppercase tracking-wider text-brand-forest transition-colors hover:bg-brand-sand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-surface-white"
+            backgroundClassName="bg-surface-white hover:bg-brand-sand"
+            textClassName="text-brand-forest"
+            className="focus-visible:outline-surface-white"
           >
             {slide.buttonLabel}
-          </Link>
-
-          {slide.note && (
-            <span className="text-[10px] uppercase tracking-wide text-surface-white/80">
-              {slide.note}
-            </span>
-          )}
+          </StoreButton>
         </div>
       </motion.div>
     </div>

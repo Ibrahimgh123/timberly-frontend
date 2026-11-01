@@ -60,7 +60,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
             changeSlide(-1);
           }
         }}
-        className="relative h-[500px] overflow-hidden rounded-xl bg-brand-forest sm:h-[620px] lg:h-[660px]"
+        className="relative h-[500px] overflow-hidden rounded-[30px] bg-brand-forest sm:h-[620px] lg:h-[660px]"
       >
         <AnimatePresence initial={false} mode="sync">
           <motion.div
