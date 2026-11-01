@@ -10,6 +10,7 @@ import {
   Font16ForestSemibold,
   Font18PlayfairForestRegular,
 } from "@/components/shared/typography";
+import { StoreButton } from "@/components/shared/store-button";
 import { StoreBadge } from "@/components/shared/store-badge";
 import type { Product } from "../types/product";
 
@@ -128,15 +129,16 @@ export function ProductCard({
             {price}
           </Font16ForestSemibold>
 
-          <button
+          <StoreButton
             type="button"
             disabled={!onQuickAdd}
             onClick={() => onQuickAdd?.(product)}
-            className="inline-flex min-h-9 items-center gap-1.5 rounded-sm bg-brand-forest px-3 text-xs text-surface-white transition-colors enabled:hover:bg-brand-walnut disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-walnut"
+            backgroundClassName="bg-brand-forest hover:bg-brand-forest"
+            className="min-h-9 gap-1.5 px-3 cursor-pointer focus-visible:outline-brand-walnut disabled:pointer-events-auto disabled:cursor-pointer disabled:opacity-100"
           >
             <ShoppingBag className="size-3.5" />
             Quick Add
-          </button>
+          </StoreButton>
         </div>
       </div>
     </article>
