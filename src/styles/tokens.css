@@ -1,0 +1,111 @@
+:root {
+  --surface-warm-white: #F7F5F0;
+  --surface-white: #FFFFFF;
+  --surface-ivory: #FBFAF0;
+  --surface-stone: #F5F4EB;
+
+  --brand-forest: #1E2823;
+  --brand-sand: #B79B7A;
+  --brand-walnut: #715A3E;
+
+  --ink-secondary: #757973;
+  --ink-deep: #09130F;
+  --ink-body: #434845;
+  --ink-muted: #737874;
+
+  --outline-warm: #E5E1D8;
+  --outline-neutral: #C3C8C3;
+
+  --status-error: #BA1A1A;
+  --status-success: #059669;
+  --status-success-strong: #065F46;
+
+  --neutral-black: #000000;
+
+  --palette-e5e7eb: #E5E7EB;
+  --palette-d1d5db: #D1D5DB;
+  --palette-eae6de: #EAE6DE;
+  --palette-efece5: #EFECE5;
+  --palette-ece7df: #ECE7DF;
+  --palette-1b1c17: #1B1C17;
+  --palette-e4e3da: #E4E3DA;
+  --palette-efeee5: #EFEEE5;
+  --palette-e9e8df: #E9E8DF;
+  --palette-9ca3af: #9CA3AF;
+  --palette-eae5d9: #EAE5D9;
+  --palette-343532: #343532;
+  --palette-c7a37c: #C7A37C;
+  --palette-6b705c: #6B705C;
+  --palette-6b7280: #6B7280;
+  --palette-fadab6: #FADAB6;
+  --palette-765f41: #765F41;
+  --palette-767676: #767676;
+  --palette-cfc5b8: #CFC5B8;
+  --palette-fddbb9: #FDDBB9;
+
+  --background: var(--surface-warm-white);
+  --foreground: var(--ink-deep);
+  --card: var(--surface-white);
+  --card-foreground: var(--ink-deep);
+  --popover: var(--surface-white);
+  --popover-foreground: var(--ink-deep);
+  --primary: var(--brand-forest);
+  --primary-foreground: var(--surface-white);
+  --secondary: var(--surface-stone);
+  --secondary-foreground: var(--ink-body);
+  --muted: var(--surface-stone);
+  --muted-foreground: var(--ink-secondary);
+  --accent: var(--surface-stone);
+  --accent-foreground: var(--brand-forest);
+  --destructive: var(--status-error);
+  --destructive-foreground: var(--surface-white);
+  --border: var(--outline-warm);
+  --input: var(--outline-warm);
+  --ring: var(--brand-walnut);
+}
+
+@theme inline {
+  --color-surface-warm-white: var(--surface-warm-white);
+  --color-surface-white: var(--surface-white);
+  --color-surface-ivory: var(--surface-ivory);
+  --color-surface-stone: var(--surface-stone);
+
+  --color-brand-forest: var(--brand-forest);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-walnut: var(--brand-walnut);
+
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink-body: var(--ink-body);
+  --color-ink-muted: var(--ink-muted);
+
+  --color-outline-warm: var(--outline-warm);
+  --color-outline-neutral: var(--outline-neutral);
+
+  --color-status-error: var(--status-error);
+  --color-status-success: var(--status-success);
+  --color-status-success-strong: var(--status-success-strong);
+
+  --color-neutral-black: var(--neutral-black);
+
+  --color-palette-e5e7eb: var(--palette-e5e7eb);
+  --color-palette-d1d5db: var(--palette-d1d5db);
+  --color-palette-eae6de: var(--palette-eae6de);
+  --color-palette-efece5: var(--palette-efece5);
+  --color-palette-ece7df: var(--palette-ece7df);
+  --color-palette-1b1c17: var(--palette-1b1c17);
+  --color-palette-e4e3da: var(--palette-e4e3da);
+  --color-palette-efeee5: var(--palette-efeee5);
+  --color-palette-e9e8df: var(--palette-e9e8df);
+  --color-palette-9ca3af: var(--palette-9ca3af);
+  --color-palette-eae5d9: var(--palette-eae5d9);
+  --color-palette-343532: var(--palette-343532);
+  --color-palette-c7a37c: var(--palette-c7a37c);
+  --color-palette-6b705c: var(--palette-6b705c);
+  --color-palette-6b7280: var(--palette-6b7280);
+  --color-palette-fadab6: var(--palette-fadab6);
+  --color-palette-765f41: var(--palette-765f41);
+  --color-palette-767676: var(--palette-767676);
+  --color-palette-cfc5b8: var(--palette-cfc5b8);
+  --color-palette-fddbb9: var(--palette-fddbb9);
+}
