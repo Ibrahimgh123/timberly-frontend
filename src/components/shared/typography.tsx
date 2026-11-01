@@ -74,3 +74,21 @@ export function Font14ForestMedium({
     </span>
   );
 }
+
+export function Font48PlayfairRegular({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-heading text-3xl leading-9 font-normal tracking-normal sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-[48px]",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
