@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { StoreBadge } from "@/components/shared/store-badge";
-import { Font48PlayfairRegular } from "@/components/shared/typography";
+import {
+  Font16JakartaLight,
+  Font48PlayfairRegular,
+} from "@/components/shared/typography";
 
 export type HeroSlideData = {
   id: string;
@@ -73,8 +76,10 @@ export function HeroSlide({ slide, priority = false }: HeroSlideProps) {
           </Font48PlayfairRegular>
         </h2>
 
-        <p className="mt-4 max-w-md text-sm leading-6 text-surface-white/80">
-          {slide.description}
+        <p className="mt-4 max-w-md">
+          <Font16JakartaLight className="text-palette-e5e7eb">
+            {slide.description}
+          </Font16JakartaLight>
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
