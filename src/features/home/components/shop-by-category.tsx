@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Font12SecondarySemibold } from "@/components/shared/typography";
+import { StoreActionLink } from "@/components/shared/store-action-link";
+import {
+  Font12SecondarySemibold,
+} from "@/components/shared/typography";
 
 import { CategoryCard, type CategoryItem } from "./category-card";
 
@@ -26,13 +27,7 @@ export function ShopByCategory({
             <Font12SecondarySemibold>Shop by category</Font12SecondarySemibold>
           </h2>
 
-          <Link
-            href={exploreHref}
-            className="inline-flex items-center gap-1 text-[11px] font-medium text-brand-walnut transition-colors hover:text-brand-forest"
-          >
-            Explore All
-            <ArrowRight className="size-3" aria-hidden="true" />
-          </Link>
+          <StoreActionLink href={exploreHref}>Explore All</StoreActionLink>
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">

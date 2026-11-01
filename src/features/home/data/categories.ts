@@ -5,44 +5,52 @@ export function getHomeCategories(locale: "en" | "ar"): CategoryItem[] {
     {
       id: "living-room",
       title: "Living Room",
-      image: "living-room.jpg",
+      image: "living-room.png",
+      subtitle: "18 Designs",
     },
     {
       id: "bedroom",
       title: "Bedroom",
-      image: "bedroom.jpg",
+      image: "Bedroom.png",
+      subtitle: "12 Designs",
     },
     {
       id: "dining-room",
       title: "Dining Room",
-      image: "dining-room.jpg",
+      image: "dining-room.png",
+      subtitle: "15 Designs",
     },
     {
       id: "kitchen",
       title: "Kitchen",
-      image: "kitchen.jpg",
+      image: "kitchen.png",
+      subtitle: "20 Designs",
     },
     {
       id: "tables-desks",
       title: "Tables",
-      image: "tables.jpg",
+      image: "Tables.png",
+      subtitle: "10 Designs",
     },
     {
       id: "cabinets-storage",
       title: "Cabinets",
-      image: "cabinets.jpg",
+      image: "Cabinets.png",
+      subtitle: "12 Designs",
     },
     {
       id: "office",
       title: "Office Furniture",
-      image: "office.jpg",
+      image: "office-furniture.png",
+      subtitle: "8 Designs",
     },
   ];
 
   return items.map((item) => ({
     id: item.id,
     title: item.title,
-    image: `/images/categories/${item.image}`,
+    image: `/images/category/${item.image}`,
     href: `/${locale}/products?category=${item.id}`,
+    subtitle: item.subtitle,
   }));
 }

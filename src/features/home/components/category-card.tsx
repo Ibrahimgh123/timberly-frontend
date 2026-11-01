@@ -17,7 +17,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       href={category.href}
-      className="group flex min-w-0 flex-col items-center rounded-lg border border-outline-warm bg-surface-white px-3 py-3 text-center transition-colors hover:border-brand-sand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-walnut"
+      className="group flex min-w-0 flex-col items-center rounded-xl border border-outline-warm bg-surface-white px-3 py-3 text-center transition-colors hover:border-brand-sand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-walnut"
     >
       <div className="relative mb-3 size-16 overflow-hidden rounded-full border border-outline-warm lg:size-20">
         <Image
