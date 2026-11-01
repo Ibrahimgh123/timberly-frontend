@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
+import { StoreBadge } from "@/components/shared/store-badge";
 
 export type HeroSlideData = {
   id: string;
@@ -57,9 +58,13 @@ export function HeroSlide({ slide, priority = false }: HeroSlideProps) {
         }}
         className="relative z-10 flex h-full max-w-2xl flex-col justify-center px-12 pb-12 pt-8 sm:px-16 lg:px-20"
       >
-        <span className="mb-4 w-fit rounded-sm bg-brand-sand px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-brand-forest">
+        <StoreBadge
+          backgroundClassName="bg-brand-sand"
+          textClassName="text-brand-forest"
+          className="mb-4"
+        >
           {slide.badge}
-        </span>
+        </StoreBadge>
 
         <h2 className="max-w-xl font-serif text-3xl leading-[1.05] tracking-tight text-surface-white sm:text-4xl lg:text-5xl">
           {slide.title}
