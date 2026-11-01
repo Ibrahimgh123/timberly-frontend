@@ -52,7 +52,7 @@ export function ProductCard({
 
   return (
     <article className="group overflow-hidden rounded-xl border border-outline-warm bg-surface-white">
-      <div className="relative h-[360px] overflow-hidden bg-surface-stone">
+      <div className="relative aspect-[5/5] overflow-hidden bg-surface-stone">
         <Link
           href={`/${locale}/products/${product.slug}`}
           aria-label={`View ${product.name}`}
