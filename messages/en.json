@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "checkout": "Checkout",
+    "trackOrder": "Track order",
+    "language": "العربية"
+  },
+  "brand": {
+    "name": "Timberly",
+    "tagline": "Thoughtful finds for your home."
+  },
+  "home": {
+    "title": "Welcome to Timberly",
+    "description": "A considered home starts here. Our collection is coming soon."
+  },
+  "pages": {
+    "products": "Products",
+    "productDetails": "Product details",
+    "cart": "Your cart",
+    "wishlist": "Your wishlist",
+    "checkout": "Checkout",
+    "trackOrder": "Track your order"
+  },
+  "empty": {
+    "products": "Our collection is on its way. Check back soon.",
+    "product": "This product is not available.",
+    "cart": "Your cart is empty.",
+    "wishlist": "Your wishlist is empty.",
+    "orders": "Enter an order number to look up an order."
+  },
+  "footer": {
+    "copyright": "© Timberly."
+  }
+}
