@@ -1,5 +1,7 @@
 import { HeroSlider } from "@/features/home/components/hero-slider";
 import type { HeroSlideData } from "@/features/home/components/hero-slide";
+import { getHomeCategories } from "./data/categories";
+import { ShopByCategory } from "./components/shop-by-category";
 
 const slides: HeroSlideData[] = [
   {
@@ -29,5 +31,13 @@ const slides: HeroSlideData[] = [
 ];
 
 export default function HomePage() {
-  return <HeroSlider slides={slides} />;
+  return (
+    <>
+      <HeroSlider slides={slides} />
+      <ShopByCategory
+        categories={getHomeCategories("en")}
+        exploreHref="/en/products"
+      />
+    </>
+  );
 }

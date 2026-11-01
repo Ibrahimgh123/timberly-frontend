@@ -39,6 +39,24 @@ export function Font12WhiteMedium({
   );
 }
 
+export function Font12SecondarySemibold({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-sans text-xs leading-4 font-semibold tracking-[1.2px] text-ink-secondary",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
 export function Font13GrayRegular({
   children,
   className,
