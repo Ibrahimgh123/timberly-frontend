@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Font10SecondaryRegular,
+  Font12ForestSemibold,
+} from "@/components/shared/typography";
 
 export type CategoryItem = {
   id: string;
@@ -29,14 +33,14 @@ export function CategoryCard({ category }: CategoryCardProps) {
         />
       </div>
 
-      <span className="text-xs font-medium leading-5 text-brand-forest">
+      <Font12ForestSemibold>
         {category.title}
-      </span>
+      </Font12ForestSemibold>
 
       {category.subtitle && (
-        <span className="text-[10px] leading-4 text-ink-secondary">
+        <Font10SecondaryRegular>
           {category.subtitle}
-        </span>
+        </Font10SecondaryRegular>
       )}
     </Link>
   );

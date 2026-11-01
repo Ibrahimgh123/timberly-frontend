@@ -75,6 +75,42 @@ export function Font12SandSemibold({
   );
 }
 
+export function Font12ForestSemibold({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-sans text-xs leading-4 font-semibold tracking-normal text-brand-forest",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
+export function Font10SecondaryRegular({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-sans text-[10px] leading-[15px] font-normal tracking-normal text-ink-secondary",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
 export function Font13GrayRegular({
   children,
   className,
