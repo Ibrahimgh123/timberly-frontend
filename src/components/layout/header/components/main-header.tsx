@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, Search, ShoppingBag, UserRound } from "lucide-react";
 import {
-  Font12GrayMedium,
   Font12WhiteMedium,
 } from "@/components/shared/typography";
 
@@ -18,12 +18,20 @@ export function MainHeader({
 }: MainHeaderProps) {
   return (
     <div className="border-b border-outline-warm/60 bg-surface-white">
-      <div className="flex flex-wrap items-center justify-between gap-x-5 gap-y-3 px-4 py-3 lg:flex-nowrap lg:px-8">
+      <div className="flex h-18 flex-wrap items-center justify-between gap-x-5 gap-y-3 px-4 py-3 lg:flex-nowrap lg:px-8">
         <Link
           href={`/${locale}`}
-          className="shrink-0 font-serif text-xl tracking-[-0.06em] text-brand-forest sm:text-2xl"
+          aria-label="Ghourani Woodwork & Furniture home"
+          className=""
         >
-          ATELIER ÉLÉMENT
+          <Image
+            src="/logo.png"
+            alt="Ghourani Woodwork & Furniture"
+            width={2172}
+            height={724}
+            priority
+            className="h-auto object-cover w-40 sm:w-60"
+          />
         </Link>
 
         <form
