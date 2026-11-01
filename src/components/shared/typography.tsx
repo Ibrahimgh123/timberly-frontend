@@ -21,6 +21,24 @@ export function Font12GrayMedium({
   );
 }
 
+export function Font12WhiteMedium({
+  children,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <span
+      {...props}
+      className={cn(
+        "font-sans text-[12px] font-medium leading-[16.5px] tracking-[0.55px] text-white",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
 export function Font13GrayRegular({
   children,
   className,

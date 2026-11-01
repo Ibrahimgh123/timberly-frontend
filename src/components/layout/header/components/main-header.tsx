@@ -1,10 +1,9 @@
 import Link from "next/link";
+import { Heart, Search, ShoppingBag, UserRound } from "lucide-react";
 import {
-  Heart,
-  Search,
-  ShoppingBag,
-  UserRound,
-} from "lucide-react";
+  Font12GrayMedium,
+  Font12WhiteMedium,
+} from "@/components/shared/typography";
 
 type MainHeaderProps = {
   locale?: "en" | "ar";
@@ -19,7 +18,7 @@ export function MainHeader({
 }: MainHeaderProps) {
   return (
     <div className="border-b border-outline-warm/60 bg-surface-white">
-      <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-5 gap-y-3 px-4 py-3 lg:flex-nowrap lg:px-8">
+      <div className="flex flex-wrap items-center justify-between gap-x-5 gap-y-3 px-4 py-3 lg:flex-nowrap lg:px-8">
         <Link
           href={`/${locale}`}
           className="shrink-0 font-serif text-xl tracking-[-0.06em] text-brand-forest sm:text-2xl"
@@ -31,7 +30,7 @@ export function MainHeader({
           action={`/${locale}/products`}
           method="get"
           role="search"
-          className="order-3 flex h-9 w-full items-center gap-3 rounded-full border border-outline-warm bg-surface-warm-white py-1 pl-3 pr-1 focus-within:ring-2 focus-within:ring-brand-walnut/30 lg:order-none lg:min-w-0 lg:flex-1"
+          className="order-3 flex h-11 w-full max-w-[650px] items-center gap-3 rounded-full border border-outline-warm bg-surface-warm-white py-1 pl-3 pr-1 focus-within:ring-2 focus-within:ring-brand-walnut/30 lg:order-none lg:min-w-0 lg:flex-1"
         >
           <Search
             className="size-4 shrink-0 text-ink-secondary"
@@ -43,14 +42,14 @@ export function MainHeader({
             name="search"
             aria-label="Search furniture"
             placeholder="Search furniture, dining tables, armchairs, storage..."
-            className="min-w-0 flex-1 bg-transparent text-xs text-ink-body outline-none placeholder:text-ink-secondary"
+            className="min-w-0 flex-1 bg-transparent text-xs text-ink-body outline-none placeholder:font-sans placeholder:text-[12px] placeholder:font-medium placeholder:leading-[16.5px] placeholder:tracking-[0.55px] placeholder:text-ink-secondary"
           />
 
           <button
             type="submit"
-            className="h-6 shrink-0 rounded-full bg-brand-forest px-4 text-[10px] font-medium tracking-wide text-surface-white transition-colors hover:bg-brand-walnut"
+            className="h-8 shrink-0 flex items-center justify-center rounded-full bg-brand-forest px-4 transition-colors hover:bg-brand-walnut"
           >
-            SEARCH
+            <Font12WhiteMedium>SEARCH</Font12WhiteMedium>
           </button>
         </form>
 
