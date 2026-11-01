@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   AnimatePresence,
@@ -9,6 +9,7 @@ import {
 } from "motion/react";
 
 import { cn } from "@/lib/utils";
+import { StoreIconButton } from "@/components/shared/store-icon-button";
 import { HeroSlide, type HeroSlideData } from "./hero-slide";
 
 type HeroSliderProps = {
@@ -18,12 +19,22 @@ type HeroSliderProps = {
 export function HeroSlider({ slides }: HeroSliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const reducedMotion = useReducedMotion();
+  const hasMultipleSlides = slides.length > 1;
+
+  useEffect(() => {
+    if (!hasMultipleSlides) return;
+
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % slides.length);
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
+  }, [hasMultipleSlides, slides.length]);
 
   if (slides.length === 0) return null;
 
   const index = activeIndex % slides.length;
   const activeSlide = slides[index];
-  const hasMultipleSlides = slides.length > 1;
 
   function changeSlide(direction: number) {
     setActiveIndex(
@@ -31,9 +42,6 @@ export function HeroSlider({ slides }: HeroSliderProps) {
         (current + direction + slides.length) % slides.length,
     );
   }
-
-  const arrowClassName =
-    "absolute top-1/2 z-20 flex size-9 -translate-y-1/2 items-center justify-center rounded-full bg-surface-white text-brand-forest shadow-sm transition-colors hover:bg-brand-sand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-surface-white";
 
   return (
     <section className="px-4 py-4 lg:px-8">
@@ -86,23 +94,21 @@ export function HeroSlider({ slides }: HeroSliderProps) {
 
         {hasMultipleSlides && (
           <>
-            <button
-              type="button"
+            <StoreIconButton
               onClick={() => changeSlide(-1)}
               aria-label="Previous slide"
-              className={cn(arrowClassName, "left-3 sm:left-4")}
+              className="absolute left-3 cursor-pointer top-1/2 z-20 -translate-y-1/2 sm:left-4"
             >
               <ChevronLeft className="size-4" />
-            </button>
+            </StoreIconButton>
 
-            <button
-              type="button"
+            <StoreIconButton
               onClick={() => changeSlide(1)}
               aria-label="Next slide"
-              className={cn(arrowClassName, "right-3 sm:right-4")}
+              className="absolute right-3  cursor-pointer top-1/2 z-20 -translate-y-1/2 sm:right-4"
             >
               <ChevronRight className="size-4" />
-            </button>
+            </StoreIconButton>
 
             <div
               aria-label="Choose slide"
