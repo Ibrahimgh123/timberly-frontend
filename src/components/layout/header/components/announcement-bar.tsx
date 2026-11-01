@@ -1,8 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { useLocale } from "next-intl";
 import { Font12GrayMedium } from "@/components/shared/typography";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+type Currency = "USD" | "LBP";
 
 export function AnnouncementBar() {
+  const [currency, setCurrency] = useState<Currency>("USD");
+  const locale = useLocale();
+
   return (
     <div className="border-b border-outline-warm bg-palette-ece7df">
       <div className="flex min-h-8 items-center justify-between gap-4 px-4 lg:px-8">
@@ -15,23 +30,43 @@ export function AnnouncementBar() {
           </span>
         </p>
 
-        <div className="flex shrink-0 items-center gap-3 text-[9px]">
+        <div className="flex shrink-0 items-center gap-3">
           <Link href="/en" lang="en">
-            <Font12GrayMedium className="text-brand-forest">
+            <Font12GrayMedium
+              className={locale === "en" ? "text-brand-forest" : undefined}
+            >
               EN
             </Font12GrayMedium>
           </Link>
-
           <Link href="/ar" lang="ar">
-            <Font12GrayMedium>العربية</Font12GrayMedium>
+            <Font12GrayMedium
+              className={locale === "ar" ? "text-brand-forest" : undefined}
+            >
+              العربية
+            </Font12GrayMedium>
           </Link>
 
           <span aria-hidden="true" className="h-3 w-px bg-outline-warm" />
 
-          <span className="flex items-center gap-1">
-            <Font12GrayMedium>USD ($)</Font12GrayMedium>
-            <ChevronDown className="size-3" aria-hidden="true" />
-          </span>
+          <Select
+            value={currency}
+            onValueChange={(value) => {
+              if (value === "USD" || value === "LBP") setCurrency(value);
+            }}
+          >
+            <SelectTrigger
+              aria-label="Currency"
+              className="h-auto min-h-0 gap-1 rounded-none border-0 bg-transparent px-0 py-0 shadow-none focus-visible:ring-0"
+            >
+              <Font12GrayMedium>
+                <SelectValue />
+              </Font12GrayMedium>
+            </SelectTrigger>
+            <SelectContent align="end" className="min-w-28">
+              <SelectItem value="USD">USD ($)</SelectItem>
+              <SelectItem value="LBP">LBP (ل.ل)</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
     </div>
