@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Font10SecondaryRegular,
-  Font12ForestSemibold,
+  Font12SecondaryRegular,
+  Font13ForestSemibold,
 } from "@/components/shared/typography";
 
 export type CategoryItem = {
@@ -23,7 +23,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
       href={category.href}
       className="group flex min-w-0 flex-col items-center rounded-xl border border-outline-warm bg-surface-white px-3 py-3 text-center transition-colors hover:border-brand-sand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-walnut"
     >
-      <div className="relative mb-3 size-16 overflow-hidden rounded-full border border-outline-warm lg:size-20">
+      <div className="relative mb-3 size-18 overflow-hidden rounded-full border border-outline-warm lg:size-24">
         <Image
           src={category.image}
           alt=""
@@ -33,14 +33,14 @@ export function CategoryCard({ category }: CategoryCardProps) {
         />
       </div>
 
-      <Font12ForestSemibold>
+      <Font13ForestSemibold>
         {category.title}
-      </Font12ForestSemibold>
+      </Font13ForestSemibold>
 
       {category.subtitle && (
-        <Font10SecondaryRegular>
+        <Font12SecondaryRegular>
           {category.subtitle}
-        </Font10SecondaryRegular>
+        </Font12SecondaryRegular>
       )}
     </Link>
   );

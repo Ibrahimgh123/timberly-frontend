@@ -75,7 +75,7 @@ export function Font12SandSemibold({
   );
 }
 
-export function Font12ForestSemibold({
+export function Font13ForestSemibold({
   children,
   className,
   ...props
@@ -84,7 +84,7 @@ export function Font12ForestSemibold({
     <span
       {...props}
       className={cn(
-        "font-sans text-xs leading-4 font-semibold tracking-normal text-brand-forest",
+        "font-sans text-xs leading-4 font-semibold tracking-normal text-brand-forest sm:text-[13px] sm:leading-[18px]",
         className,
       )}
     >
@@ -93,7 +93,7 @@ export function Font12ForestSemibold({
   );
 }
 
-export function Font10SecondaryRegular({
+export function Font12SecondaryRegular({
   children,
   className,
   ...props
@@ -102,7 +102,7 @@ export function Font10SecondaryRegular({
     <span
       {...props}
       className={cn(
-        "font-sans text-[10px] leading-[15px] font-normal tracking-normal text-ink-secondary",
+        "font-sans text-xs leading-4 font-normal tracking-normal text-ink-secondary",
         className,
       )}
     >
