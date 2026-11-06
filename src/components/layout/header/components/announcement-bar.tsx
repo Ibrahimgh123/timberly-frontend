@@ -20,7 +20,7 @@ export function AnnouncementBar() {
 
   return (
     <div className="border-b border-outline-warm bg-palette-ece7df">
-      <div className="flex min-h-8 items-center justify-between gap-4 px-4 lg:px-8">
+      <div className="page-gutter flex min-h-8 items-center justify-between gap-4">
         <p className="flex items-center gap-2 text-[9px] tracking-wide text-ink-secondary">
           <span className="size-1.5 rounded-full bg-brand-sand" />
           <span>

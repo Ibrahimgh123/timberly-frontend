@@ -5,6 +5,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --page-gutter: 1rem;
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --page-gutter: 2rem;
+  }
+}
+
+@utility page-gutter {
+  padding-inline: var(--page-gutter);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

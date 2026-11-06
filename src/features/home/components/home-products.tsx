@@ -47,7 +47,7 @@ export function HomeProducts({
   return (
     <section
       aria-labelledby="home-products-title"
-      className="bg-surface-warm-white px-4 py-8 lg:px-8"
+      className="page-gutter bg-surface-warm-white py-8"
     >
       <div className="">
         <div className="mb-6 flex flex-col gap-5 border-b border-outline-warm pb-5 lg:flex-row lg:items-end lg:justify-between">

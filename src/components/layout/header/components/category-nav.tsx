@@ -26,7 +26,7 @@ export function CategoryNav({
       aria-label="Furniture categories"
       className="border-b border-outline-warm bg-surface-white"
     >
-      <div className="mx-auto max-w-[1440px] overflow-x-auto px-4 lg:px-8">
+      <div className="page-gutter overflow-x-auto">
         <ul className="flex min-w-max items-center justify-between gap-8">
           {categories.map(({ label, slug }) => {
             const isActive = activeCategory === slug;

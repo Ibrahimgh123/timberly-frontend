@@ -18,7 +18,7 @@ export function MainHeader({
 }: MainHeaderProps) {
   return (
     <div className="border-b border-outline-warm bg-surface-white">
-      <div className="flex h-18 flex-wrap items-center justify-between gap-x-5 gap-y-3 px-4 py-3 lg:flex-nowrap lg:px-8">
+      <div className="page-gutter flex h-18 flex-wrap items-center justify-between gap-x-5 gap-y-3 py-3 lg:flex-nowrap">
         <Link
           href={`/${locale}`}
           aria-label="Ghourani Woodwork & Furniture home"

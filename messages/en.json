@@ -32,6 +32,32 @@
     "orders": "Enter an order number to look up an order."
   },
   "footer": {
-    "copyright": "© Timberly."
+    "brand": "Timberly",
+    "description": "Thoughtful furniture and timeless pieces, chosen to make your home feel like yours.",
+    "delivery": "Carefully delivered to your home, wherever you are.",
+    "quickLinks": {
+      "title": "Quick links",
+      "home": "Home",
+      "shop": "Shop all",
+      "wishlist": "Wishlist",
+      "trackOrder": "Track an order"
+    },
+    "categories": {
+      "title": "Categories",
+      "livingRoom": "Living room",
+      "bedroom": "Bedroom",
+      "diningRoom": "Dining room",
+      "tablesDesks": "Tables & desks",
+      "storage": "Cabinets & storage"
+    },
+    "care": {
+      "title": "Your account",
+      "delivery": "Order tracking",
+      "warranty": "Explore furniture",
+      "cart": "Shopping bag",
+      "checkout": "Checkout"
+    },
+    "closing": "Made for a home that feels like you.",
+    "copyright": "Copyright © 2025 Timberly. All rights reserved."
   }
 }

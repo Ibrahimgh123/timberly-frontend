@@ -44,7 +44,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
   }
 
   return (
-    <section className="px-4 py-4 lg:px-8">
+    <section className="page-gutter py-4">
       <div
         role="region"
         aria-roledescription="carousel"
