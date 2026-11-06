@@ -3,9 +3,9 @@ import { MainHeader } from "../layout/header/components/main-header";
 
 export function SiteHeader() {
   return (
-    <header>
+    <>
       <AnnouncementBar />
       <MainHeader />
-    </header>
+    </>
   );
 }
